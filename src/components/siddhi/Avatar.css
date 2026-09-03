@@ -1,0 +1,197 @@
+/**
+ * AVATAR STYLES
+ * Supporting CSS for Avatar component
+ */
+
+.avatar-container {
+  perspective: 1000px;
+}
+
+.avatar-main {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.avatar-glow {
+  filter: blur(20px);
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+}
+
+.avatar-eye {
+  transition: all 0.2s ease-out;
+}
+
+.avatar-pupil {
+  transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.avatar-mouth {
+  transition: all 0.2s ease-out;
+}
+
+.avatar-wave {
+  animation: wave-hand 0.6s ease-in-out;
+  transform-origin: right bottom;
+}
+
+@keyframes wave-hand {
+  0% {
+    transform: rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(30deg) scale(1);
+  }
+  100% {
+    transform: rotate(-30deg) scale(1);
+  }
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .avatar-small {
+    width: 80px;
+    height: 80px;
+  }
+
+  .avatar-medium {
+    width: 120px;
+    height: 120px;
+  }
+
+  .avatar-large {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 769px) {
+  .avatar-small {
+    width: 96px;
+    height: 96px;
+  }
+
+  .avatar-medium {
+    width: 160px;
+    height: 160px;
+  }
+
+  .avatar-large {
+    width: 256px;
+    height: 256px;
+  }
+}
+
+/* Animation classes */
+.avatar-animate-breath {
+  animation: avatar-breath 2s ease-in-out infinite;
+}
+
+@keyframes avatar-breath {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.avatar-animate-bounce {
+  animation: avatar-bounce 0.8s ease-in-out infinite;
+}
+
+@keyframes avatar-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.avatar-animate-pulse {
+  animation: avatar-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes avatar-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.avatar-animate-jump {
+  animation: avatar-jump 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes avatar-jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.avatar-animate-nod {
+  animation: avatar-nod 1s ease-in-out infinite;
+}
+
+@keyframes avatar-nod {
+  0%, 100% {
+    transform: rotateX(0deg);
+  }
+  25% {
+    transform: rotateX(15deg);
+  }
+  75% {
+    transform: rotateX(-15deg);
+  }
+}
+
+.avatar-animate-shake {
+  animation: avatar-shake 0.5s ease-in-out;
+}
+
+@keyframes avatar-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+}
+
+.avatar-animate-sleep {
+  animation: avatar-sleep 2s ease-in-out infinite;
+}
+
+@keyframes avatar-sleep {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
